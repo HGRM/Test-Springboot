@@ -10,13 +10,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FormRequest {
-    private String from_id;
+    private String form_id;
     private String response_id;
 
 
-    
+
     @Override
     public String toString() {
-        return "{\"form_id\":\"" + from_id + "\", \"response_id\":\"" + response_id + "\"}";
+        return "{\"form_id\":\"" + form_id + "\", \"response_id\":\"" + response_id + "\"}";
     }
 }
