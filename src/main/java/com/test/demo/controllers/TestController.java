@@ -1,18 +1,16 @@
 package com.test.demo.controllers;
 
-
-
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 
 @RestController
 @RequestMapping("/test")
-public class Test {
-
+public class TestController {
     @GetMapping("/hello")
-    public Stirng sayHello(){
+    public String sayHello() {
         return "Hola";
     }
 }
