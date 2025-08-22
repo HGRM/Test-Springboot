@@ -22,13 +22,19 @@ public class FormularioController {
     @NoArgsConstructor
     @AllArgsConstructor
     public class RequestForm {
-        public String id;
+        private String from_id;
+        private String response_id;
+
+        @Override
+        public String toString() {
+            return "{\"form_id\":\"" + from_id + "\", \"response_id\":\"" + response_id + "\"}";
+        }
     }
 
 
 
     @PostMapping("/add")
     public void postMethodName(@RequestBody RequestForm request) {
-        System.out.println(request.id);
+        System.out.println(request.toString());
     }
 }
