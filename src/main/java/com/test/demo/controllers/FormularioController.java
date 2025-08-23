@@ -15,8 +15,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 @RequestMapping("/form")
 public class FormularioController {
-    @PostMapping("/add")
+    @PostMapping("/set-data")
     public void postMethodName(@RequestBody FormRequest request) {
         System.out.println(request.toString());
+    }
+
+    @PostMapping("/url")
+    public void postMethodName(@RequestBody String url) {
+        System.out.println(url);
     }
 }
